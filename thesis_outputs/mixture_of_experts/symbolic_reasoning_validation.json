@@ -1,0 +1,160 @@
+{
+  "validation_summary": {
+    "0": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_393",
+        "feature_440",
+        "feature_41",
+        "feature_20",
+        "feature_55"
+      ]
+    },
+    "1": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_393",
+        "feature_440",
+        "feature_41",
+        "feature_20",
+        "feature_55"
+      ]
+    },
+    "2": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_393",
+        "feature_440",
+        "feature_41",
+        "feature_20",
+        "feature_55"
+      ]
+    },
+    "3": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_393",
+        "feature_440",
+        "feature_41",
+        "feature_20",
+        "feature_55"
+      ]
+    },
+    "4": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_349",
+        "feature_251",
+        "feature_348",
+        "feature_71",
+        "feature_293"
+      ]
+    },
+    "5": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_393",
+        "feature_440",
+        "feature_41",
+        "feature_20",
+        "feature_55"
+      ]
+    },
+    "6": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_393",
+        "feature_440",
+        "feature_41",
+        "feature_20",
+        "feature_55"
+      ]
+    },
+    "7": {
+      "alignment_score": 0.0,
+      "significant_features": [],
+      "top_features": [
+        "feature_440",
+        "feature_393",
+        "feature_145",
+        "feature_67",
+        "feature_322"
+      ]
+    }
+  },
+  "baselines_metadata": {
+    "description": "Statistical baselines for symbolic reasoning from NeoPolyp dataset",
+    "high_risk_samples": 743,
+    "low_risk_samples": 257,
+    "feature_dimensions": 60,
+    "feature_names": [
+      "LAB_L_bin0",
+      "LAB_L_bin1",
+      "LAB_L_bin2",
+      "LAB_a_bin0",
+      "LAB_a_bin1",
+      "LAB_a_bin2",
+      "LAB_b_bin0",
+      "LAB_b_bin1",
+      "LAB_b_bin2",
+      "Sat_bin0",
+      "Sat_bin1",
+      "Sat_bin2",
+      "Sat_bin3",
+      "Sat_bin4",
+      "Sat_bin5",
+      "Sat_bin6",
+      "Sat_bin7",
+      "Sat_bin8",
+      "Sat_bin9",
+      "Sat_bin10",
+      "Sat_bin11",
+      "Sat_bin12",
+      "Sat_bin13",
+      "Sat_bin14",
+      "Sat_bin15",
+      "Haralick_0",
+      "Haralick_1",
+      "Haralick_2",
+      "Haralick_3",
+      "Haralick_4",
+      "Haralick_5",
+      "Haralick_6",
+      "Haralick_7",
+      "Haralick_8",
+      "Haralick_9",
+      "Haralick_10",
+      "Haralick_11",
+      "Haralick_12",
+      "LBP_bin0",
+      "LBP_bin1",
+      "LBP_bin2",
+      "LBP_bin3",
+      "LBP_bin4",
+      "LBP_bin5",
+      "LBP_bin6",
+      "LBP_bin7",
+      "LBP_bin8",
+      "LBP_bin9",
+      "LBP_bin10",
+      "LBP_bin11",
+      "LBP_bin12",
+      "LBP_bin13",
+      "LBP_bin14",
+      "LBP_bin15",
+      "LBP_bin16",
+      "LBP_bin17",
+      "LBP_bin18",
+      "Texture_Complexity",
+      "Relative_Area",
+      "Compactness"
+    ]
+  }
+}

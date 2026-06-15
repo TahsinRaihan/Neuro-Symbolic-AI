@@ -1,0 +1,56 @@
+{
+  "texture_divisor": 1399.3083662168715,
+  "feature_thresholds": {
+    "redness": 0.17540909349918365,
+    "vessel_visibility": 0.473538339138031,
+    "texture": 0.09527910500764847,
+    "radius": 0.7103429436683655,
+    "s_mean": 0.6617670655250549
+  },
+  "logistic_weights": {
+    "redness": 0.6807827255555744,
+    "vessel_visibility": -0.29764338210394947,
+    "texture": 0.02400892803854294,
+    "radius": -0.29064618989579577,
+    "s_mean": -0.2540142996341547
+  },
+  "scaler": {
+    "mean": [
+      0.1752942957095802,
+      0.9018268439732492,
+      0.20346543904207648,
+      0.7782360109686851,
+      0.5154279792308807
+    ],
+    "scale": [
+      0.04712333401511415,
+      0.1602332128823254,
+      0.17244814939918884,
+      0.050621280128873125,
+      0.11363627698712535
+    ],
+    "feature_names": [
+      "redness",
+      "vessel_visibility",
+      "texture",
+      "radius",
+      "s_mean"
+    ]
+  },
+  "logistic_intercept": 0.06287943333177129,
+  "risk_high_boundary": 0.5087216996592715,
+  "risk_low_boundary": 0.3052330197955629,
+  "confidence_clip_low": 0.3193463462248458,
+  "confidence_clip_high": 0.7302375860676733,
+  "margin_penalty": 0.14643837467926835,
+  "feature_names": [
+    "redness",
+    "vessel_visibility",
+    "texture",
+    "radius",
+    "s_mean"
+  ],
+  "n_high_risk": 736,
+  "n_low_risk": 264,
+  "derived_from": "NeoPolyp_ground_truth"
+}

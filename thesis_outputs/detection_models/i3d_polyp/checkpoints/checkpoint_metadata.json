@@ -1,0 +1,6 @@
+{
+  "last_epoch": 49,
+  "last_checkpoint": "C:\\Users\\T2520847\\P3\\Codes\\Thesis V5\\thesis_outputs\\detection_models\\i3d_polyp\\checkpoints\\i3d_checkpoint_epoch_050.pth",
+  "best_val_acc": 92.52893721501228,
+  "total_epochs_trained": 50
+}

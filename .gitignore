@@ -1,0 +1,61 @@
+# ── PYTHON ENVIRONMENT ──────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── DATASETS (too large + license restricted) ────────────────────
+NeSy/Dataset 1/
+NeSy/Dataset 3/
+NeSy/Dataset i3d/
+NeSy/Neo polyp Dataset/train/
+NeSy/Neo polyp Dataset/test/
+NeSy/Neo polyp Dataset/train_gt/
+NeSy/Apply Video/
+NeSy/video ramis/
+
+# Keep the annotation CSV (small, needed for reproduction)
+# NeSy/video-annotations.csv  ← DO NOT ignore this one
+
+# ── TRAINED MODEL WEIGHTS (binary, too large for GitHub) ─────────
+*.pt
+*.pth
+*.pkl
+*.onnx
+*.weights
+*.h5
+
+# ── LARGE BINARY OUTPUTS ─────────────────────────────────────────
+thesis_outputs/video_inference_results/**/annotated_all_models.mp4
+thesis_outputs/cropped_rois/images/
+thesis_outputs/cropped_rois/masks/
+thesis_outputs/extracted_features/all_features.npz
+thesis_outputs/phase1_combined_dataset/train/
+thesis_outputs/phase1_combined_dataset/val/
+
+# ── TRAINING RUN LOGS (auto-generated, volatile) ──────────────────
+Training script/runs/
+Training script/0.5.12/
+Training script/p5 draft/
+
+# ── INFERENCE VIDEO OUTPUT (373 mp4 files) ────────────────────────
+*.mp4
+*.avi
+
+# ── SYSTEM FILES ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE FILES ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ── JUPYTER ──────────────────────────────────────────────────────
+.ipynb_checkpoints/

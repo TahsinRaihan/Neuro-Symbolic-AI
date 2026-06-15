@@ -1,0 +1,92 @@
+{
+  "video_info": {
+    "name": "17241dcf-de85-461d-9435-f5134035aacb.avi",
+    "path": "C:\\Users\\T2520847\\P3\\Codes\\Thesis V5\\NeSy\\Apply Video\\17241dcf-de85-461d-9435-f5134035aacb.avi",
+    "file_size_mb": 11.54638671875,
+    "frames_processed": 314
+  },
+  "detections_summary": {
+    "yolo": {
+      "total_detections": 0,
+      "average_confidence": 0.0,
+      "min_confidence": 0.0,
+      "max_confidence": 0.0,
+      "frames_with_detections": 0,
+      "stable_tracks": 0
+    },
+    "rtdetr": {
+      "total_detections": 0,
+      "average_confidence": 0.0,
+      "min_confidence": 0.0,
+      "max_confidence": 0.0,
+      "frames_with_detections": 0,
+      "stable_tracks": 0
+    },
+    "medsam": {
+      "total_detections": 0,
+      "average_confidence": 0.0,
+      "frames_with_detections": 0,
+      "stable_tracks": 0
+    }
+  },
+  "segmentations_summary": {},
+  "consensus_voting": {
+    "polyp_present": false,
+    "overall_confidence": 0.0,
+    "consensus_frame_count": 0,
+    "consensus_percentage": 0.0,
+    "num_consensus_runs": 0,
+    "average_confidence_boost": 0.0,
+    "models_detected": 0,
+    "yolo_detected": false,
+    "rtdetr_detected": false,
+    "medsam_detected": false,
+    "frame_level_consensus_count": 0,
+    "border_filtered_count": 0
+  },
+  "symbolic_reasoning_summary": {
+    "total_analyzed": 0,
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "consensus_polyp_count": 0,
+    "polyp_type_counts": {},
+    "error_count": 0,
+    "_temporal_consensus": {
+      "tracks": [],
+      "total_polyp_instances": 0,
+      "total_frame_coverage": 0,
+      "average_confidence_boost": 0.0
+    },
+    "temporal_aggregation": {
+      "total_tracks": 0,
+      "total_track_frames": 0,
+      "average_confidence_boost": 0.0
+    },
+    "rules_applied": [
+      "Rule1_MedSAM2Hybrid",
+      "Rule2_Consensus",
+      "Rule3_ClinicalSplit",
+      "Rule4_SSLFeatures",
+      "Rule5_BorderFilter",
+      "TemporalAveraging"
+    ],
+    "results": []
+  },
+  "polyp_features_detail": [],
+  "processing_timestamp": "2026-06-03T23:28:29.348696",
+  "rules_applied": {
+    "rule1_medsam_independent": false,
+    "rule1_description": "MedSAM uses detector-guided box prompts with point fallback and mask-constrained ROI segmentation",
+    "rule2_consensus_voting": false,
+    "rule2_description": "Only polyps with continuous multi-frame agreement from all 3 models are accepted",
+    "rule3_symbolic_reasoning": false,
+    "rule3_description": "Video-level 70-30 split used for symbolic reasoning separation",
+    "rule4_ssl_features": true,
+    "rule4_description": "444-dimensional SSL features + masked ROI biomarkers integrated into expert decisions",
+    "rule5_roi_analysis": false,
+    "rule5_description": "Border and background artifacts are excluded by mask-based ROI cropping"
+  },
+  "video_annotation": "normal mucosa, bbps 2",
+  "video_level_clinical_class": "UNKNOWN"
+}

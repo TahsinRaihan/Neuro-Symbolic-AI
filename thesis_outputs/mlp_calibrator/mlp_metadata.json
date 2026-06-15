@@ -1,0 +1,47 @@
+{
+  "architecture": {
+    "input_dim": 452,
+    "feature_dim": 444,
+    "cluster_dim": 8,
+    "hidden_dims": [
+      256,
+      128,
+      64
+    ],
+    "dropout_rates": [
+      0.35,
+      0.3,
+      0.2
+    ]
+  },
+  "training": {
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "max_epochs": 100,
+    "best_epoch": 6,
+    "patience": 20,
+    "val_split": 0.2
+  },
+  "performance": {
+    "train": {
+      "accuracy": 0.94375,
+      "precision": 0.9537190082644628,
+      "recall": 0.9713804713804713,
+      "f1": 0.9624687239366139,
+      "roc_auc": 0.98861593279069
+    },
+    "val": {
+      "accuracy": 0.76,
+      "precision": 0.8344370860927153,
+      "recall": 0.8456375838926175,
+      "f1": 0.84,
+      "roc_auc": 0.7272009474930912
+    }
+  },
+  "asge_thresholds": {
+    "high_confidence": 0.9,
+    "uncertainty": 0.8
+  },
+  "timestamp": "2026-04-23T10:36:58.133728"
+}

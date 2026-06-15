@@ -1,0 +1,613 @@
+{
+  "video_info": {
+    "name": "fe683132-a4c7-4254-93ff-6fe44524cf53.avi",
+    "path": "C:\\Users\\T2520847\\P3\\Codes\\Thesis V5\\NeSy\\Apply Video\\fe683132-a4c7-4254-93ff-6fe44524cf53.avi",
+    "file_size_mb": 9.91357421875,
+    "frames_processed": 370
+  },
+  "detections_summary": {
+    "yolo": {
+      "total_detections": 225,
+      "average_confidence": 0.7097107116381327,
+      "min_confidence": 0.5006580352783203,
+      "max_confidence": 0.8533231019973755,
+      "frames_with_detections": 225,
+      "stable_tracks": 0
+    },
+    "rtdetr": {
+      "total_detections": 252,
+      "average_confidence": 0.7771076511532541,
+      "min_confidence": 0.40154793858528137,
+      "max_confidence": 0.9214145541191101,
+      "frames_with_detections": 251,
+      "stable_tracks": 0
+    },
+    "medsam": {
+      "total_detections": 313,
+      "average_confidence": 0.8654278154952076,
+      "min_confidence": 0.765625,
+      "max_confidence": 0.921875,
+      "frames_with_detections": 313,
+      "stable_tracks": 0
+    }
+  },
+  "segmentations_summary": {
+    "medsam": {
+      "frames_with_segmentation": 313,
+      "avg_mask_shape": "unknown"
+    }
+  },
+  "consensus_voting": {
+    "polyp_present": true,
+    "overall_confidence": 0.873824593755934,
+    "consensus_frame_count": 30,
+    "consensus_percentage": 8.108108108108109,
+    "num_consensus_runs": 1,
+    "average_confidence_boost": 0.045844373438093444,
+    "models_detected": 3,
+    "yolo_detected": true,
+    "rtdetr_detected": true,
+    "medsam_detected": true,
+    "frame_level_consensus_count": 34,
+    "border_filtered_count": 129
+  },
+  "symbolic_reasoning_summary": {
+    "total_analyzed": 1,
+    "high_risk_count": 1,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "consensus_polyp_count": 1,
+    "polyp_type_counts": {
+      "BLEEDING_POLYP": 1
+    },
+    "error_count": 0,
+    "_temporal_consensus": {
+      "tracks": [
+        {
+          "polyp_id": 1,
+          "start_frame": 299,
+          "end_frame": 328,
+          "num_frames": 30,
+          "frame_sequence": [
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            315,
+            316,
+            317,
+            318,
+            319,
+            320,
+            321,
+            322,
+            323,
+            324,
+            325,
+            326,
+            327,
+            328
+          ],
+          "confidences": [
+            0.8279802203178406,
+            0.8400388956069946,
+            0.8419573505719503,
+            0.8555155197779337,
+            0.8670153419176737,
+            0.8830172220865885,
+            0.8818600575129191,
+            0.8834002812703451,
+            0.8833465973536173,
+            0.8860426942507426,
+            0.8880529205004374,
+            0.8850065867106119,
+            0.8928935925165812,
+            0.8800370693206787,
+            0.8799360195795695,
+            0.8857617775599161,
+            0.8889334201812744,
+            0.8896849751472473,
+            0.8827400008837382,
+            0.8809838692347208,
+            0.8803892930348715,
+            0.8921019832293192,
+            0.8870855371157328,
+            0.8856693704922994,
+            0.872523824373881,
+            0.878397544225057,
+            0.8470711708068848,
+            0.8667441209157308,
+            0.8519531885782877,
+            0.8485973676045736
+          ],
+          "original_average_conf": 0.8279802203178406,
+          "temporal_average_conf": 0.873824593755934,
+          "confidence_boost": 0.045844373438093444,
+          "box": [
+            415.9889946831598,
+            270.68128153483065,
+            468.90741068522135,
+            321.29746263292094
+          ],
+          "all_boxes": [
+            [
+              530.2188110351562,
+              255.42533365885416,
+              574.0407511393229,
+              303.5884195963542
+            ],
+            [
+              509.6234944661458,
+              253.77716064453125,
+              558.1278483072916,
+              308.76329549153644
+            ],
+            [
+              482.46266682942706,
+              257.3371276855469,
+              534.8088989257812,
+              309.39915974934894
+            ],
+            [
+              456.33399454752606,
+              261.9509684244792,
+              511.1864013671875,
+              312.47825113932294
+            ],
+            [
+              440.5163167317708,
+              264.75661214192706,
+              491.5054931640625,
+              314.44350179036456
+            ],
+            [
+              431.9607645670573,
+              266.4957275390625,
+              482.6980285644531,
+              315.9513244628906
+            ],
+            [
+              427.7271321614583,
+              269.3842468261719,
+              479.7272033691406,
+              320.5251770019531
+            ],
+            [
+              425.75536092122394,
+              269.9223124186198,
+              476.49302164713544,
+              321.7628987630208
+            ],
+            [
+              418.4933369954427,
+              269.50901285807294,
+              473.30959065755206,
+              321.2234802246094
+            ],
+            [
+              411.4850362141927,
+              270.0602213541667,
+              466.03228759765625,
+              320.80772908528644
+            ],
+            [
+              408.32712809244794,
+              270.24973551432294,
+              463.40516153971356,
+              320.8771158854167
+            ],
+            [
+              404.2869059244792,
+              272.2821350097656,
+              457.56529744466144,
+              322.16998291015625
+            ],
+            [
+              400.43540445963544,
+              273.0170593261719,
+              454.4355773925781,
+              323.31285603841144
+            ],
+            [
+              394.4190673828125,
+              274.033203125,
+              450.7741190592448,
+              324.67359415690106
+            ],
+            [
+              388.4868570963542,
+              275.5042724609375,
+              444.07801310221356,
+              325.8207600911458
+            ],
+            [
+              385.28052775065106,
+              275.92701212565106,
+              441.11488850911456,
+              326.6435241699219
+            ],
+            [
+              381.4121602376302,
+              276.4642028808594,
+              437.22540283203125,
+              327.86865234375
+            ],
+            [
+              378.0341288248698,
+              276.8470153808594,
+              432.93421427408856,
+              326.98822021484375
+            ],
+            [
+              375.84454345703125,
+              279.15721638997394,
+              427.6818033854167,
+              329.01746622721356
+            ],
+            [
+              376.1835123697917,
+              281.4353739420573,
+              430.7857157389323,
+              331.88124593098956
+            ],
+            [
+              373.19549560546875,
+              283.5342712402344,
+              429.0087483723958,
+              333.53663126627606
+            ],
+            [
+              371.2680155436198,
+              284.82733154296875,
+              425.4022521972656,
+              334.0609944661458
+            ],
+            [
+              369.58913167317706,
+              286.2133382161458,
+              424.1438903808594,
+              335.95155843098956
+            ],
+            [
+              370.0659586588542,
+              285.5115559895833,
+              426.07008870442706,
+              335.92223103841144
+            ],
+            [
+              378.9934387207031,
+              281.3953145345052,
+              432.3150329589844,
+              330.78905232747394
+            ],
+            [
+              400.5512288411458,
+              273.2648111979167,
+              455.26922607421875,
+              323.23646036783856
+            ],
+            [
+              424.9312744140625,
+              266.99281819661456,
+              478.61964925130206,
+              317.76531982421875
+            ],
+            [
+              442.1435038248698,
+              261.9170837402344,
+              492.7437438964844,
+              313.0567118326823
+            ],
+            [
+              454.0197347005208,
+              257.822265625,
+              502.2724202473958,
+              309.6510314941406
+            ],
+            [
+              467.6249084472656,
+              245.4237060546875,
+              513.4475504557291,
+              296.7572326660156
+            ]
+          ],
+          "frame": 299,
+          "confidence_sequence": [
+            0.873824593755934
+          ],
+          "frame_confidence_pairs": [
+            [
+              299,
+              0.873824593755934
+            ],
+            [
+              300,
+              0.873824593755934
+            ],
+            [
+              301,
+              0.873824593755934
+            ],
+            [
+              302,
+              0.873824593755934
+            ],
+            [
+              303,
+              0.873824593755934
+            ],
+            [
+              304,
+              0.873824593755934
+            ],
+            [
+              305,
+              0.873824593755934
+            ],
+            [
+              306,
+              0.873824593755934
+            ],
+            [
+              307,
+              0.873824593755934
+            ],
+            [
+              308,
+              0.873824593755934
+            ],
+            [
+              309,
+              0.873824593755934
+            ],
+            [
+              310,
+              0.873824593755934
+            ],
+            [
+              311,
+              0.873824593755934
+            ],
+            [
+              312,
+              0.873824593755934
+            ],
+            [
+              313,
+              0.873824593755934
+            ],
+            [
+              314,
+              0.873824593755934
+            ],
+            [
+              315,
+              0.873824593755934
+            ],
+            [
+              316,
+              0.873824593755934
+            ],
+            [
+              317,
+              0.873824593755934
+            ],
+            [
+              318,
+              0.873824593755934
+            ],
+            [
+              319,
+              0.873824593755934
+            ],
+            [
+              320,
+              0.873824593755934
+            ],
+            [
+              321,
+              0.873824593755934
+            ],
+            [
+              322,
+              0.873824593755934
+            ],
+            [
+              323,
+              0.873824593755934
+            ],
+            [
+              324,
+              0.873824593755934
+            ],
+            [
+              325,
+              0.873824593755934
+            ],
+            [
+              326,
+              0.873824593755934
+            ],
+            [
+              327,
+              0.873824593755934
+            ],
+            [
+              328,
+              0.873824593755934
+            ]
+          ],
+          "representative_frame": 299,
+          "representative_confidence": 0.873824593755934
+        }
+      ],
+      "total_polyp_instances": 1,
+      "total_frame_coverage": 30,
+      "average_confidence_boost": 0.045844373438093444
+    },
+    "temporal_aggregation": {
+      "total_tracks": 1,
+      "total_track_frames": 30,
+      "average_confidence_boost": 0.045844373438093444
+    },
+    "rules_applied": [
+      "Rule1_MedSAM2Hybrid",
+      "Rule2_Consensus",
+      "Rule3_ClinicalSplit",
+      "Rule4_SSLFeatures",
+      "Rule5_BorderFilter",
+      "TemporalAveraging"
+    ],
+    "results": [
+      {
+        "polyp_id": 1,
+        "frame": 299,
+        "classification": "HIGH_RISK",
+        "expert_classification": "HIGH_RISK",
+        "confidence": 0.7302375860676733,
+        "symbolic_confidence": 0.7302375860676733,
+        "detection_confidence": 0.873824593755934,
+        "clinical_confidence": 0.7302375860676733,
+        "ssl_boost_applied": 0.0,
+        "consensus": true,
+        "model": "temporal_consensus",
+        "redness": 0.2972523868083954,
+        "texture": 0.2537238467257712,
+        "vessel_visibility": 0.9830287206266318,
+        "radius": 0.05163364333375517,
+        "polyp_type": "BLEEDING_POLYP",
+        "polyp_type_confidence": 0.92,
+        "cluster_id": 6,
+        "prediction_source": "ssl_enhanced_cluster_specific",
+        "ssl_integrated": true,
+        "method": "enhanced_ssl_444dim",
+        "num_frames": 30,
+        "frame_sequence": [
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324,
+          325,
+          326,
+          327,
+          328
+        ],
+        "clinical_class": "MALIGNANT_POLYP",
+        "clinical_risk": "HIGH",
+        "clinical_description": "High suspicion for malignancy \u2014 biopsy and urgent resection recommended"
+      }
+    ]
+  },
+  "polyp_features_detail": [
+    {
+      "polyp_id": 1,
+      "frame": 299,
+      "model": "temporal_consensus",
+      "consensus": true,
+      "redness": 0.2972523868083954,
+      "radius": 0.05163364333375517,
+      "texture": 0.2537238467257712,
+      "vessel_visibility": 0.9830287206266318,
+      "classification": "HIGH_RISK",
+      "expert_classification": "HIGH_RISK",
+      "confidence": 0.7302375860676733,
+      "symbolic_confidence": 0.7302375860676733,
+      "detection_confidence": 0.873824593755934,
+      "clinical_confidence": 0.7302375860676733,
+      "risk_score": 0.6455234549097489,
+      "polyp_type": "BLEEDING_POLYP",
+      "polyp_type_confidence": 0.92,
+      "cluster_id": 6,
+      "prediction_source": "ssl_enhanced_cluster_specific",
+      "box": [
+        528.8140869140625,
+        254.0247344970703,
+        575.0159912109375,
+        305.18878173828125
+      ],
+      "num_frames": 30,
+      "frame_sequence": [
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "temporal_boost": 0.045844373438093444
+    }
+  ],
+  "processing_timestamp": "2026-06-04T17:39:27.771628",
+  "rules_applied": {
+    "rule1_medsam_independent": true,
+    "rule1_description": "MedSAM uses detector-guided box prompts with point fallback and mask-constrained ROI segmentation",
+    "rule2_consensus_voting": true,
+    "rule2_description": "Only polyps with continuous multi-frame agreement from all 3 models are accepted",
+    "rule3_symbolic_reasoning": true,
+    "rule3_description": "Video-level 70-30 split used for symbolic reasoning separation",
+    "rule4_ssl_features": true,
+    "rule4_description": "444-dimensional SSL features + masked ROI biomarkers integrated into expert decisions",
+    "rule5_roi_analysis": true,
+    "rule5_description": "Border and background artifacts are excluded by mask-based ROI cropping"
+  },
+  "video_annotation": "polyp",
+  "video_level_clinical_class": "BLEEDING_POLYP"
+}

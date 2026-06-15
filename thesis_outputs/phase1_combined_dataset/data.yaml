@@ -1,0 +1,5 @@
+path: C:/Users/T2520847/P3/Codes/Thesis V5/thesis_outputs/phase1_combined_dataset
+train: train/images
+val: val/images
+nc: 1
+names: ['polyp']

@@ -1,0 +1,6 @@
+Error: name 'calibrate_clinical_confidence' is not defined
+Traceback (most recent call last):
+  File "C:\Users\T2520847\P3\Codes\Thesis V5\Training script\phase5_video_inference\phase5_video_inference.py", line 2170, in process_video
+    clinical_confidence = calibrate_clinical_confidence(symbolic_confidence, detection_confidence, risk_score)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'calibrate_clinical_confidence' is not defined

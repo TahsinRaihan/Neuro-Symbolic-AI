@@ -1,0 +1,270 @@
+================================================================================
+     GROUND-TRUTH ANALYSIS & POLYP CHARACTERISTICS REPORT
+     Phase 4.5 – MLP Probability Calibrator
+     Generated : 2026-04-23  10:36:58
+================================================================================
+
+PURPOSE
+-------
+This report shows (a) ground-truth labels extracted from NeoPolyp
+colour masks, (b) per-polyp biomarker characteristics, (c) cluster
+assignments, and (d) a side-by-side comparison of the legacy
+cluster-static probability vs. the new MLP instance-level
+probability for each polyp image.
+
+GROUND-TRUTH ENCODING (from mask colour)
+---------------------------------------------
+  RED   dominant pixels  -->  label 1  (Neoplastic  / High-Risk / Remove)
+  GREEN dominant pixels  -->  label 0  (Non-neoplastic / Low-Risk / Leave)
+
+DATASET SUMMARY
+---------------------------------------------
+  Total images   : 1,000
+  Neoplastic     : 743  (74.3%)
+  Non-neoplastic : 257  (25.7%)
+
+CLUSTER-LEVEL COMPARISON  (Static vs MLP)
+================================================================================
+  Cluster      N     Hi     Lo    Static%    MLP Mean    MLP Std    MLP Min    MLP Max
+  ----------------------------------------------------------------------------
+        0      1    1.0    0.0     100.00%       63.30%       0.00%      63.30%      63.30%
+        1  (empty)
+        2     12    5.0    7.0      41.67%       48.32%      25.57%      16.94%      93.04%
+        3  (empty)
+        4     84   65.0   19.0      77.38%       65.44%      22.18%      11.71%      97.46%
+        5  (empty)
+        6  (empty)
+        7    903  672.0  231.0      74.42%       69.39%      26.60%       8.89%      99.53%
+
+INTERPRETATION:
+  Static%  = SAME probability given to every polyp in that cluster (old way)
+  MLP Mean = Average MLP probability for the cluster
+  MLP Std  = Spread of MLP probabilities within the cluster
+           A non-zero Std confirms polyps NOW receive unique probabilities.
+
+PER-IMAGE DETAILS  (first 200 shown for brevity)
+================================================================================
+  Image                                                 GT  Cluster   Static%     MLP%  ASGE Decision
+  ----------------------------------------------------------------------------------------------------
+  0081835cf877e004e8bfb905b78a9139.jpeg                  H        7     74.42%  90.46%  HIGH RISK    (Resect & Discard)
+  00d827b8bcf15050fb9af0ef92846b60.jpeg                  H        7     74.42%  61.45%  LOW RISK     (Surveillance)
+  00f9b6c911c4aa179344271fa54aa1b2.jpeg                  H        4     77.38%  90.98%  HIGH RISK    (Resect & Discard)
+  00fd197cd955fa095f978455cef3593c.jpeg                  L        7     74.42%  22.03%  LOW RISK     (Surveillance)
+  01c13a3d810b000db55759486b8aa1b8.jpeg                  L        7     74.42%  80.57%  UNCERTAIN    (Require Biopsy)
+  01e80947f9c02314fc58bdb26679bff5.jpeg                  H        7     74.42%  87.04%  UNCERTAIN    (Require Biopsy)
+  01ff069910ea2abe3c84417fda801941.jpeg                  H        7     74.42%  85.93%  UNCERTAIN    (Require Biopsy)
+  02000f9b6c911c4aa179344271fa54aa.jpeg                  H        4     77.38%  91.29%  HIGH RISK    (Resect & Discard)
+  021bab9fc7330398846f67b5df7cdf3f.jpeg                  H        7     74.42%  98.53%  HIGH RISK    (Resect & Discard)
+  02345d341253851bc866ebe4d18d5401.jpeg                  H        7     74.42%  90.91%  HIGH RISK    (Resect & Discard)
+  025ba0e3b6d0bf0b5633059989805234.jpeg                  H        7     74.42%  56.18%  LOW RISK     (Surveillance)
+  02b296cc5cfd263f1f90be2879923502.jpeg                  H        7     74.42%  95.58%  HIGH RISK    (Resect & Discard)
+  0317371a966bf4b3466463a3c64db170.jpeg                  L        7     74.42%  24.60%  LOW RISK     (Surveillance)
+  033c03b0af70cc0f6d32b726342865f6.jpeg                  H        7     74.42%  74.47%  LOW RISK     (Surveillance)
+  0351267e98bd886544a2a98ee309ce76.jpeg                  H        4     77.38%  97.46%  HIGH RISK    (Resect & Discard)
+  03983064a3eb4d49033c03b0af70cc0f.jpeg                  H        7     74.42%  83.56%  UNCERTAIN    (Require Biopsy)
+  03d2cbbcfa4baf3866269959350e7998.jpeg                  H        7     74.42%  70.91%  LOW RISK     (Surveillance)
+  03f909df7cd066b37f538abe9de67869.jpeg                  H        7     74.42%  57.15%  LOW RISK     (Surveillance)
+  040781d54ffd6a8ee924dbd70f618d52.jpeg                  H        7     74.42%  96.63%  HIGH RISK    (Resect & Discard)
+  04414eaa922bca73d5379c7c851a5082.jpeg                  H        7     74.42%  64.15%  LOW RISK     (Surveillance)
+  0449922d6157edc3d82df22c41b503dc.jpeg                  H        7     74.42%  95.21%  HIGH RISK    (Resect & Discard)
+  0449ad43fe2cd066b9fdbc3bbc04a3af.jpeg                  H        7     74.42%  77.57%  LOW RISK     (Surveillance)
+  047dc0cbb58aa032554b5eb4fcf0130a.jpeg                  L        7     74.42%  24.28%  LOW RISK     (Surveillance)
+  04801b37705c1e555525d4f09ce7270b.jpeg                  H        7     74.42%  80.18%  UNCERTAIN    (Require Biopsy)
+  0496b83ef461c2a337948a41964c1d4f.jpeg                  L        7     74.42%  25.61%  LOW RISK     (Surveillance)
+  04c34a359bbb402345d341253851bc86.jpeg                  H        7     74.42%  93.35%  HIGH RISK    (Resect & Discard)
+  04ccdc265a0b0a1230b118fa8625605d.jpeg                  H        7     74.42%  66.44%  LOW RISK     (Surveillance)
+  04f234b701fc691ffa02f6068b683019.jpeg                  L        4     77.38%  25.73%  LOW RISK     (Surveillance)
+  051fc90e85d064f787d4be168d951058.jpeg                  H        7     74.42%  91.02%  HIGH RISK    (Resect & Discard)
+  052600f1f93e952886d1697f8af9b550.jpeg                  H        7     74.42%  91.49%  HIGH RISK    (Resect & Discard)
+  0528810e9d05be942fd5dd0902e0db22.jpeg                  H        7     74.42%  93.49%  HIGH RISK    (Resect & Discard)
+  054d694539ef2424a9218697283baa36.jpeg                  H        7     74.42%  94.71%  HIGH RISK    (Resect & Discard)
+  0676289b3e732adb4c5d1580670d78b9.jpeg                  L        7     74.42%  31.39%  LOW RISK     (Surveillance)
+  069910ea2abe3c84417fda8019410b1f.jpeg                  H        7     74.42%  84.84%  UNCERTAIN    (Require Biopsy)
+  06cb09d1fc6869d7b4193425b976973f.jpeg                  H        7     74.42%  60.01%  LOW RISK     (Surveillance)
+  076135d76d0bbd4ce2a1405f7d507592.jpeg                  H        7     74.42%  88.39%  UNCERTAIN    (Require Biopsy)
+  077bad31c8c5f54ffaa27a623511c389.jpeg                  L        7     74.42%  53.16%  LOW RISK     (Surveillance)
+  07907941a8490fd7df8e26031fbb5e52.jpeg                  H        4     77.38%  84.08%  UNCERTAIN    (Require Biopsy)
+  081835cf877e004e8bfb905b78a91391.jpeg                  H        7     74.42%  87.80%  UNCERTAIN    (Require Biopsy)
+  085835c525af63a987f428c953248704.jpeg                  H        7     74.42%  91.79%  HIGH RISK    (Resect & Discard)
+  08cc3736e216b08d237285e26c90e179.jpeg                  L        7     74.42%  26.75%  LOW RISK     (Surveillance)
+  08d237285e26c90e1797c77826f9a702.jpeg                  H        7     74.42%  37.80%  LOW RISK     (Surveillance)
+  09384b57bb6a052600f1f93e952886d1.jpeg                  H        7     74.42%  76.83%  LOW RISK     (Surveillance)
+  09817287a8aef566999467c2a48847ae.jpeg                  H        7     74.42%  56.11%  LOW RISK     (Surveillance)
+  099130d98309817287a8aef566999467.jpeg                  H        7     74.42%  80.87%  UNCERTAIN    (Require Biopsy)
+  09d1dff09b8405734fbeedd0f9da760d.jpeg                  L        7     74.42%  21.27%  LOW RISK     (Surveillance)
+  09df7cd066b37f538abe9de67869ac66.jpeg                  H        7     74.42%  83.06%  UNCERTAIN    (Require Biopsy)
+  0a1230b118fa8625605da2023387fd56.jpeg                  H        7     74.42%  77.36%  LOW RISK     (Surveillance)
+  0a22abd004c33abf3ae2136cd9dd77ae.jpeg                  H        4     77.38%  81.97%  UNCERTAIN    (Require Biopsy)
+  0a6085835c525af63a987f428c953248.jpeg                  H        7     74.42%  94.33%  HIGH RISK    (Resect & Discard)
+  0aa5f7804c34a359bbb402345d341253.jpeg                  L        7     74.42%  65.49%  LOW RISK     (Surveillance)
+  0adabead1ae730831caf386f6e366943.jpeg                  H        4     77.38%  81.95%  UNCERTAIN    (Require Biopsy)
+  0b1300cb1b387133b51209db6dcdda5c.jpeg                  L        7     74.42%  47.53%  LOW RISK     (Surveillance)
+  0b47aa6b7b1fecb5579bf4a5ced589c4.jpeg                  L        4     77.38%  12.30%  LOW RISK     (Surveillance)
+  0b9afea6923881bf04350ffd6984cbcc.jpeg                  H        7     74.42%  81.66%  UNCERTAIN    (Require Biopsy)
+  0bbd4ce2a1405f7d507592b964b7955a.jpeg                  H        7     74.42%  56.41%  LOW RISK     (Surveillance)
+  0bd55b1393e2ef89424de1556a26c8eb.jpeg                  H        7     74.42%  80.09%  UNCERTAIN    (Require Biopsy)
+  0bf0b5633059989805234e222e19769f.jpeg                  H        7     74.42%  95.24%  HIGH RISK    (Resect & Discard)
+  0bfd2a52829ab4e7568cb49a3c530b99.jpeg                  H        7     74.42%  98.56%  HIGH RISK    (Resect & Discard)
+  0c90be319e1d6d19a707a4fdcc58c9c9.jpeg                  L        2     41.67%  16.94%  LOW RISK     (Surveillance)
+  0e1797c77826f9a7021bab9fc7330398.jpeg                  H        7     74.42%  93.41%  HIGH RISK    (Resect & Discard)
+  0e3b6d0bf0b5633059989805234e222e.jpeg                  H        7     74.42%  59.13%  LOW RISK     (Surveillance)
+  0e85d064f787d4be168d9510588bec07.jpeg                  H        7     74.42%  96.14%  HIGH RISK    (Resect & Discard)
+  0eaf044301ff069910ea2abe3c84417f.jpeg                  H        7     74.42%  77.94%  LOW RISK     (Surveillance)
+  0ebce6347c491b37c8c2e5a64a8bd16f.jpeg                  H        7     74.42%  65.05%  LOW RISK     (Surveillance)
+  0f1536ad3f6a5664c1711b62f15ec83b.jpeg                  H        7     74.42%  89.65%  UNCERTAIN    (Require Biopsy)
+  0f1f93e952886d1697f8af9b550c1bce.jpeg                  H        7     74.42%  71.53%  LOW RISK     (Surveillance)
+  0f618d52893a23c466c16952b6692e6b.jpeg                  L        7     74.42%  22.60%  LOW RISK     (Surveillance)
+  0fb9af0ef92846b60b1a38a1eecd70eb.jpeg                  H        7     74.42%  95.02%  HIGH RISK    (Resect & Discard)
+  10a38713b2aa6ce8d1cf6644589e532a.jpeg                  L        7     74.42%  16.98%  LOW RISK     (Surveillance)
+  10b1fcf0625f608b4ce97629ab559b28.jpeg                  H        7     74.42%  99.24%  HIGH RISK    (Resect & Discard)
+  117c6599c6dc55c83a46ce2be9800e6c.jpeg                  L        7     74.42%  25.60%  LOW RISK     (Surveillance)
+  11c4aa179344271fa54aa1b27918630b.jpeg                  H        7     74.42%  85.38%  UNCERTAIN    (Require Biopsy)
+  11f025ba0e3b6d0bf0b5633059989805.jpeg                  L        7     74.42%  33.31%  LOW RISK     (Surveillance)
+  12295dd542315b4c10e2b0e33fa12bfc.jpeg                  H        7     74.42%  89.12%  UNCERTAIN    (Require Biopsy)
+  124dbc13ca0eaf044301ff069910ea2a.jpeg                  H        4     77.38%  62.77%  LOW RISK     (Surveillance)
+  1276e3f404b79b6669075945dc8ec8f0.jpeg                  H        7     74.42%  97.26%  HIGH RISK    (Resect & Discard)
+  130a76ba2ea3ad774c0444718528404f.jpeg                  L        7     74.42%  29.63%  LOW RISK     (Surveillance)
+  13ccf1f4b331a412fc44655fb51f809d.jpeg                  H        7     74.42%  87.44%  UNCERTAIN    (Require Biopsy)
+  145a7d8d3b6c0ed754f28ca745212295.jpeg                  H        7     74.42%  89.88%  UNCERTAIN    (Require Biopsy)
+  149398b798da48d679d7c7c8d3d96fb2.jpeg                  L        7     74.42%  42.72%  LOW RISK     (Surveillance)
+  14fc58bdb26679bff55177a34fc01019.jpeg                  H        7     74.42%  93.99%  HIGH RISK    (Resect & Discard)
+  152b672ab3492fc6239c86a73f97dd52.jpeg                  L        7     74.42%  64.36%  LOW RISK     (Surveillance)
+  15334875343f27ebc5d92b9076135d76.jpeg                  H        7     74.42%  70.30%  LOW RISK     (Surveillance)
+  1573af7f31f04dc06992d92472facb34.jpeg                  L        7     74.42%  23.39%  LOW RISK     (Surveillance)
+  15a51625559c7e610b1531871f2fd85a.jpeg                  H        7     74.42%  78.98%  LOW RISK     (Surveillance)
+  15c88d81a4106de1bdb8f4c31cfc1c9d.jpeg                  H        7     74.42%  70.66%  LOW RISK     (Surveillance)
+  163a745959c03983064a3eb4d49033c0.jpeg                  H        7     74.42%  71.07%  LOW RISK     (Surveillance)
+  16d06046f5d8dd18841d318d1f625619.jpeg                  H        7     74.42%  62.93%  LOW RISK     (Surveillance)
+  16d4ca6160127cd1d5ff99c267599fc4.jpeg                  H        7     74.42%  60.16%  LOW RISK     (Surveillance)
+  17287a8aef566999467c2a48847ae839.jpeg                  H        7     74.42%  67.95%  LOW RISK     (Surveillance)
+  1743c6c08a1d1ad8f2c5f72724e00d82.jpeg                  H        7     74.42%  94.17%  HIGH RISK    (Resect & Discard)
+  177a34fc01019eec999fd84e679b05f9.jpeg                  H        7     74.42%  85.24%  UNCERTAIN    (Require Biopsy)
+  17ba487d4878a9bf8a6f4d4987ea3b4b.jpeg                  H        7     74.42%  66.78%  LOW RISK     (Surveillance)
+  17f87cf12b41e5e9e5040781d54ffd6a.jpeg                  H        7     74.42%  98.79%  HIGH RISK    (Resect & Discard)
+  18d52893a23c466c16952b6692e6be5e.jpeg                  L        7     74.42%  25.41%  LOW RISK     (Surveillance)
+  18d5401f659532897255ce2dd4ae1b0f.jpeg                  H        7     74.42%  86.22%  UNCERTAIN    (Require Biopsy)
+  18fa8625605da2023387fd56c04414ea.jpeg                  H        2     41.67%  62.51%  LOW RISK     (Surveillance)
+  193ac8d551c149b60f2965341caf528c.jpeg                  H        7     74.42%  84.41%  UNCERTAIN    (Require Biopsy)
+  19410b1fcf0625f608b4ce97629ab559.jpeg                  H        7     74.42%  87.73%  UNCERTAIN    (Require Biopsy)
+  195f853af7f8a4df1ec859759b7c8743.jpeg                  H        7     74.42%  94.10%  HIGH RISK    (Resect & Discard)
+  19d9ae2a9833aa6b8232510939c091a7.jpeg                  H        7     74.42%  85.74%  UNCERTAIN    (Require Biopsy)
+  1a65d2b46d0a6085835c525af63a987f.jpeg                  H        7     74.42%  84.39%  UNCERTAIN    (Require Biopsy)
+  1b248d152b672ab3492fc6239c86a73f.jpeg                  L        7     74.42%  43.65%  LOW RISK     (Surveillance)
+  1b9298e11bb07c70f3701ae6bcec5dd8.jpeg                  L        7     74.42%  15.06%  LOW RISK     (Surveillance)
+  1b976b7a7efc10b1300cb1b387133b51.jpeg                  H        7     74.42%  95.61%  HIGH RISK    (Resect & Discard)
+  1c149b60f2965341caf528ca0adabead.jpeg                  H        7     74.42%  90.63%  HIGH RISK    (Resect & Discard)
+  1c4aa179344271fa54aa1b27918630bf.jpeg                  H        7     74.42%  87.77%  UNCERTAIN    (Require Biopsy)
+  1c74143555dbf9c4ebafbd9871ca68e0.jpeg                  H        7     74.42%  31.11%  LOW RISK     (Surveillance)
+  1caf528ca0adabead1ae730831caf386.jpeg                  H        4     77.38%  71.78%  LOW RISK     (Surveillance)
+  1cfc1c9d33f3a7b24423d5c7edd71817.jpeg                  H        7     74.42%  66.35%  LOW RISK     (Surveillance)
+  1d4dc3ddad260bfcb4443de3ef69f6db.jpeg                  H        7     74.42%  81.42%  UNCERTAIN    (Require Biopsy)
+  1d54ffd6a8ee924dbd70f618d52893a2.jpeg                  H        7     74.42%  96.07%  HIGH RISK    (Resect & Discard)
+  1db40939d9a2f94285ef2a23f9dbbb7b.jpeg                  H        7     74.42%  89.26%  UNCERTAIN    (Require Biopsy)
+  1e555525d4f09ce7270bfec57e441680.jpeg                  L        7     74.42%  29.88%  LOW RISK     (Surveillance)
+  1efbafa0940efd09e941bb189a5dbc20.jpeg                  L        7     74.42%  35.93%  LOW RISK     (Surveillance)
+  1f3cf29dff2864e2d89df283ecd59f91.jpeg                  H        7     74.42%  90.61%  HIGH RISK    (Resect & Discard)
+  1f625619d9ae2a9833aa6b8232510939.jpeg                  L        7     74.42%  16.38%  LOW RISK     (Surveillance)
+  1f659532897255ce2dd4ae1b0f124dbc.jpeg                  H        7     74.42%  95.99%  HIGH RISK    (Resect & Discard)
+  1fcf0625f608b4ce97629ab559b28f39.jpeg                  H        4     77.38%  71.36%  LOW RISK     (Surveillance)
+  1fd8bbf118acd7936140a2d5fc1443c4.jpeg                  H        7     74.42%  76.90%  LOW RISK     (Surveillance)
+  1ff069910ea2abe3c84417fda8019410.jpeg                  H        4     77.38%  88.34%  UNCERTAIN    (Require Biopsy)
+  1ffb963e1713a8763b8318ecf467d7ad.jpeg                  L        7     74.42%  67.48%  LOW RISK     (Surveillance)
+  20362736055807907941a8490fd7df8e.jpeg                  H        7     74.42%  85.37%  UNCERTAIN    (Require Biopsy)
+  21fbbec5a215f0f235a823d5349ab65a.jpeg                  L        7     74.42%  48.44%  LOW RISK     (Surveillance)
+  222e19769fa2d37d32780fd497e1c0e9.jpeg                  H        7     74.42%  78.47%  LOW RISK     (Surveillance)
+  225024da63fb9a76b92633408da4bcab.jpeg                  H        7     74.42%  91.64%  HIGH RISK    (Resect & Discard)
+  229db65646d81526eb91e2da9e6afaef.jpeg                  H        7     74.42%  85.80%  UNCERTAIN    (Require Biopsy)
+  229fe1bce59ddf92e76900d229db6564.jpeg                  H        7     74.42%  96.40%  HIGH RISK    (Resect & Discard)
+  22af6b2da43f71d4dc3ddad260bfcb44.jpeg                  H        7     74.42%  82.84%  UNCERTAIN    (Require Biopsy)
+  23099dd2eedba39099848c4425bf33b9.jpeg                  H        7     74.42%  89.94%  UNCERTAIN    (Require Biopsy)
+  230b118fa8625605da2023387fd56c04.jpeg                  H        4     77.38%  55.20%  LOW RISK     (Surveillance)
+  2315b4c10e2b0e33fa12bfcd6da15fc6.jpeg                  H        7     74.42%  98.32%  HIGH RISK    (Resect & Discard)
+  23387fd56c04414eaa922bca73d5379c.jpeg                  H        7     74.42%  56.03%  LOW RISK     (Surveillance)
+  2345d341253851bc866ebe4d18d5401f.jpeg                  H        7     74.42%  91.43%  HIGH RISK    (Resect & Discard)
+  234e222e19769fa2d37d32780fd497e1.jpeg                  H        7     74.42%  80.88%  UNCERTAIN    (Require Biopsy)
+  23c4eaf3372eae567c94ea04c603f909.jpeg                  H        7     74.42%  90.01%  HIGH RISK    (Resect & Discard)
+  24423d5c7edd718176ef3065837ced5c.jpeg                  H        4     77.38%  65.82%  LOW RISK     (Surveillance)
+  24dbc13ca0eaf044301ff069910ea2ab.jpeg                  H        7     74.42%  66.73%  LOW RISK     (Surveillance)
+  24dbd70f618d52893a23c466c16952b6.jpeg                  H        7     74.42%  88.78%  UNCERTAIN    (Require Biopsy)
+  24e00d827b8bcf15050fb9af0ef92846.jpeg                  H        4     77.38%  91.20%  HIGH RISK    (Resect & Discard)
+  2510939c091a7915c942b2f94722af7f.jpeg                  H        7     74.42%  44.17%  LOW RISK     (Surveillance)
+  251eedf26ed414a42bec7a5fdbaf2760.jpeg                  H        7     74.42%  77.00%  LOW RISK     (Surveillance)
+  253851bc866ebe4d18d5401f65953289.jpeg                  H        7     74.42%  96.01%  HIGH RISK    (Resect & Discard)
+  255ce2dd4ae1b0f124dbc13ca0eaf044.jpeg                  H        7     74.42%  93.90%  HIGH RISK    (Resect & Discard)
+  25605da2023387fd56c04414eaa922bc.jpeg                  H        7     74.42%  64.52%  LOW RISK     (Surveillance)
+  25af63a987f428c953248704ccdc265a.jpeg                  H        7     74.42%  81.59%  UNCERTAIN    (Require Biopsy)
+  26231002ec4a1fe748f3085f1ce88cbd.jpeg                  L        7     74.42%  30.83%  LOW RISK     (Surveillance)
+  269959350e7998934d417cb2eb1ef57a.jpeg                  H        7     74.42%  68.52%  LOW RISK     (Surveillance)
+  26a6f23c5d6d5f35f66adf95b204727f.jpeg                  H        7     74.42%  90.44%  HIGH RISK    (Resect & Discard)
+  26f9a7021bab9fc7330398846f67b5df.jpeg                  H        7     74.42%  96.83%  HIGH RISK    (Resect & Discard)
+  276a476420655433a925101416ae101f.jpeg                  H        7     74.42%  65.61%  LOW RISK     (Surveillance)
+  276e3f404b79b6669075945dc8ec8f02.jpeg                  H        7     74.42%  96.07%  HIGH RISK    (Resect & Discard)
+  2780fd497e1c0e9082ea2c193ac8d551.jpeg                  H        7     74.42%  84.57%  UNCERTAIN    (Require Biopsy)
+  2829ab4e7568cb49a3c530b99ec16e8b.jpeg                  H        7     74.42%  93.40%  HIGH RISK    (Resect & Discard)
+  284b8e6953ad88e16d4ca6160127cd1d.jpeg                  L        4     77.38%  73.01%  LOW RISK     (Surveillance)
+  28559ba2bbb610fe8c30d660e70f44c2.jpeg                  L        7     74.42%  54.10%  LOW RISK     (Surveillance)
+  2864e2d89df283ecd59f911f025ba0e3.jpeg                  H        7     74.42%  95.08%  HIGH RISK    (Resect & Discard)
+  28ca0adabead1ae730831caf386f6e36.jpeg                  H        7     74.42%  71.10%  LOW RISK     (Surveillance)
+  28f39a546f6eeb0a13b346f09286c94c.jpeg                  L        7     74.42%  39.66%  LOW RISK     (Surveillance)
+  296cc5cfd263f1f90be28799235026b3.jpeg                  H        4     77.38%  91.03%  HIGH RISK    (Resect & Discard)
+  298e11bb07c70f3701ae6bcec5dd8e74.jpeg                  L        7     74.42%  18.73%  LOW RISK     (Surveillance)
+  2a23f9dbbb7bb39ba25b3887ffdc8d09.jpeg                  L        7     74.42%  48.37%  LOW RISK     (Surveillance)
+  2a48e11d579d903c7d178f6ea0ad83b8.jpeg                  H        7     74.42%  82.63%  UNCERTAIN    (Require Biopsy)
+  2a52829ab4e7568cb49a3c530b99ec16.jpeg                  H        7     74.42%  96.32%  HIGH RISK    (Resect & Discard)
+  2ab3492fc6239c86a73f97dd5277dd17.jpeg                  H        7     74.42%  87.50%  UNCERTAIN    (Require Biopsy)
+  2abd004c33abf3ae2136cd9dd77aef5e.jpeg                  H        7     74.42%  87.94%  UNCERTAIN    (Require Biopsy)
+  2abe3c84417fda8019410b1fcf0625f6.jpeg                  H        7     74.42%  98.77%  HIGH RISK    (Resect & Discard)
+  2af6b2da43f71d4dc3ddad260bfcb444.jpeg                  L        4     77.38%  41.27%  LOW RISK     (Surveillance)
+  2b4eebc9e5a87e443434ac60af15041b.jpeg                  L        7     74.42%  61.73%  LOW RISK     (Surveillance)
+  2b964b7955a1d7a36ccf1225024da63f.jpeg                  H        4     77.38%  31.40%  LOW RISK     (Surveillance)
+  2bb3c7abacdbd7e6afd56ea7bc4ba26c.jpeg                  L        7     74.42%  31.96%  LOW RISK     (Surveillance)
+  2be8379499640676289b3e732adb4c5d.jpeg                  H        7     74.42%  68.32%  LOW RISK     (Surveillance)
+  2c41545ba55aadaa77712a48e11d579d.jpeg                  L        7     74.42%  19.65%  LOW RISK     (Surveillance)
+  2cbbcfa4baf3866269959350e7998934.jpeg                  H        7     74.42%  63.20%  LOW RISK     (Surveillance)
+  2d6157edc3d82df22c41b503dc19ce17.jpeg                  L        7     74.42%  43.84%  LOW RISK     (Surveillance)
+  2d95e6c487ffa651b4774229fe1bce59.jpeg                  H        7     74.42%  67.82%  LOW RISK     (Surveillance)
+  2da9e6afaef7fdb2d45b21960c94b0aa.jpeg                  H        7     74.42%  92.91%  HIGH RISK    (Resect & Discard)
+  2eb9d32a3dc907950289e976c7250de9.jpeg                  L        4     77.38%  60.01%  LOW RISK     (Surveillance)
+  2f514f401ea0bd55b1393e2ef89424de.jpeg                  L        7     74.42%  25.76%  LOW RISK     (Surveillance)
+  2f94722af7f63cd771e7606cb09d1fc6.jpeg                  H        4     77.38%  73.38%  LOW RISK     (Surveillance)
+  2fa602bb3c7abacdbd7e6afd56ea7bc4.jpeg                  H        7     74.42%  87.39%  UNCERTAIN    (Require Biopsy)
+  301ff069910ea2abe3c84417fda80194.jpeg                  H        7     74.42%  71.86%  LOW RISK     (Surveillance)
+  305af926a6f23c5d6d5f35f66adf95b2.jpeg                  H        7     74.42%  67.35%  LOW RISK     (Surveillance)
+  30831caf386f6e366943c17f87cf12b4.jpeg                  H        7     74.42%  97.77%  HIGH RISK    (Resect & Discard)
+  309817287a8aef566999467c2a48847a.jpeg                  H        7     74.42%  66.97%  LOW RISK     (Surveillance)
+  309d1dff09b8405734fbeedd0f9da760.jpeg                  L        7     74.42%  31.59%  LOW RISK     (Surveillance)
+  30ed08f25358edf70899344dae61a5f5.jpeg                  L        7     74.42%  46.61%  LOW RISK     (Surveillance)
+  31871f2fd85a04faeeb2b53579739530.jpeg                  H        7     74.42%  57.62%  LOW RISK     (Surveillance)
+  32897255ce2dd4ae1b0f124dbc13ca0e.jpeg                  L        7     74.42%  52.51%  LOW RISK     (Surveillance)
+  3297c819c908954bb13d3727c7e5e106.jpeg                  H        7     74.42%  74.88%  LOW RISK     (Surveillance)
+  33059989805234e222e19769fa2d37d3.jpeg                  H        7     74.42%  71.21%  LOW RISK     (Surveillance)
+  33408da4bcab47c3fb256f174ae992b9.jpeg                  H        7     74.42%  89.45%  UNCERTAIN    (Require Biopsy)
+  337948a41964c1d4f50a5f3601ad4f13.jpeg                  H        7     74.42%  92.19%  HIGH RISK    (Resect & Discard)
+  3387fd56c04414eaa922bca73d5379c7.jpeg                  H        7     74.42%  66.44%  LOW RISK     (Surveillance)
+  33aa6b8232510939c091a7915c942b2f.jpeg                  H        7     74.42%  16.54%  LOW RISK     (Surveillance)
+  33fa12bfcd6da15fc656702fa602bb3c.jpeg                  H        7     74.42%  91.06%  HIGH RISK    (Resect & Discard)
+  3408da4bcab47c3fb256f174ae992b91.jpeg                  H        7     74.42%  93.77%  HIGH RISK    (Resect & Discard)
+  340aa5f7804c34a359bbb402345d3412.jpeg                  H        7     74.42%  30.72%  LOW RISK     (Surveillance)
+  342865f6c240449ad43fe2cd066b9fdb.jpeg                  H        7     74.42%  76.13%  LOW RISK     (Surveillance)
+
+  ... (800 more rows in polyp_characteristics.csv)
+
+KEY BIOMARKER STATISTICS ACROSS CLASSES
+================================================================================
+
+  Biomarker                      Non-neoplastic Mean   Neoplastic Mean
+  --------------------------------------------------------------------
+  Texture_Complexity                        0.063466          0.071483
+  Relative_Area                             0.993399          0.991199
+  Compactness                               0.785398          0.785398
+  LAB_a_bin0                                0.000000          0.000000
+  LAB_a_bin1                                0.997181          0.992295
+  LAB_a_bin2                                0.002819          0.007705
+  Haralick_0                                0.748792          0.788089
+  Haralick_1                                1.102700          1.175345
+  Haralick_2                                0.740467          0.781794
+  ssl_feat_l2                               3.243719          3.243514
+
+  (Full 60-dim biomarker values available in polyp_characteristics.csv)
+
+END OF REPORT

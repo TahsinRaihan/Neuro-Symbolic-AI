@@ -1,0 +1,10 @@
+{
+  "num_experts": 8,
+  "high_confidence_threshold": 0.9,
+  "uncertainty_threshold": 0.8,
+  "decision_logic": {
+    "high_risk": "risk_prob >= 0.9",
+    "uncertain": "0.8 <= risk_prob < 0.9",
+    "low_risk": "risk_prob < 0.8"
+  }
+}

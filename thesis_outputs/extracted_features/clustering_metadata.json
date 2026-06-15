@@ -1,0 +1,17 @@
+{
+  "num_samples": 10679,
+  "num_clusters": 8,
+  "feature_dim": 444,
+  "ssl_feature_dim": 384,
+  "biomarker_dim": 60,
+  "cluster_distribution": {
+    "0": 628,
+    "1": 2559,
+    "2": 4,
+    "3": 2734,
+    "4": 744,
+    "5": 170,
+    "6": 2519,
+    "7": 1321
+  }
+}
